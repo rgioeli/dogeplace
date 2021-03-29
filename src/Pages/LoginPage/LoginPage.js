@@ -5,11 +5,7 @@ const LoginPage = ({ currentUser }) => {
     const history = useHistory()
 
     const routeLocation = () => {
-        if (currentUser.email) {
-            history.push('/timeline')
-        } else {
-            <Redirect to='/' />
-        }
+        
     }
 
     routeLocation()

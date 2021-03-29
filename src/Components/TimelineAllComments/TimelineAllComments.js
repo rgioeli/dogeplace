@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { firestore } from '../../Firebase/firebase_util'
 import TimelinePostTemplate from '../../Components/TimelinePostTemplate/TimelinePostTemplate'
+import { v4 as uuidv4 } from 'uuid'
 
 const TimelineAllComments = () => {
     const [postsList, setPostsList] = useState([])
@@ -10,14 +11,14 @@ const TimelineAllComments = () => {
             const getPosts = await firestore.collection('posts').onSnapshot(snapShot => setPostsList(snapShot.docs.map(doc => doc.data())));
         }
 
-        pullAllPosts();
+        pullAllPosts()
     }, [])
 
     return (
         <div>
             {
                 postsList.map(data => {
-                    return <TimelinePostTemplate data={data} key={data.post}/>
+                    return <TimelinePostTemplate data={data} key={uuidv4()}/>
                 })
             }
         </div>

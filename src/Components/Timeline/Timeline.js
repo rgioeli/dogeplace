@@ -17,7 +17,7 @@ const Timeline = ({ currentUser }) => {
             await firestore.collection('users').onSnapshot(snapshot => setUsers(snapshot.docs.map(doc => doc.data())));
         }
         
-        setUserComments();
+        setUserComments()
     }, [])
 
     
