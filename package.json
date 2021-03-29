@@ -1,4 +1,5 @@
 {
+  "homepage": "https://github.com/rgioeli/dogeplace.git",
   "name": "app",
   "version": "0.1.0",
   "private": true,
@@ -7,7 +8,6 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.8.3",
     "firebase": "^8.3.1",
-    "homepage": "https://github.com/rgioeli/dogeplace.git",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-expanding-textarea": "^2.3.1",
