@@ -87,7 +87,6 @@ const SignUpStyled = styled.div`
     flex-direction:column;
     justify-content:center;
     align-items:center;
-    font-family: 'Doge Sans', sans-serif;
 
     .error-code {
         background-color:#B9A135;

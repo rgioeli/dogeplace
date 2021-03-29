@@ -105,7 +105,6 @@ const LinkStyled = styled(Link)`
 const SignUpStyled = styled.div`
     width:90vw;
     margin:auto;
-    font-family: 'Doge Sans', sans-serif;
 
     .container {
         display:flex;
