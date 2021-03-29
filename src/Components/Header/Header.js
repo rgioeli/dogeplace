@@ -1,53 +1,60 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
-import styled from 'styled-components'
-import dogeIcon from '../../Images/doge-icon.png'
-import { ContainerStyled } from '../../CSS/GlobalStyled'
-import { auth } from '../../Firebase/firebase_util'
-import { useEffect } from 'react'
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+// import { faBars } from '@fortawesome/free-solid-svg-icons'
+// import styled from 'styled-components'
+// import dogeIcon from '../../Images/doge-icon.png'
+// import { ContainerStyled } from '../../CSS/GlobalStyled'
+// import { auth } from '../../Firebase/firebase_util'
+// import { useEffect } from 'react'
+// import { Redirect, useHistory } from 'react-router-dom'
 
-const Header = ({ currentUser }) => {
+// const Header = ({ currentUser }) => {
+//     const history = useHistory()
 
-    return (
-        <HeaderStyled>
-            <ContainerStyled className='container'>
-                <FontAwesomeIcon id='bars' size='2x' icon={ faBars } />
-                <div className="show-login-frame">
-                    <img src={ dogeIcon } />
-                    <p>{currentUser ? currentUser.uid : null}</p>
-                    { currentUser ? <button onClick={ () => auth.signOut() }>Logout</button> : null}
-                </div>
-            </ContainerStyled>
-        </HeaderStyled>
-    )
-}
+//     const handleLogout = () => {
+//         <Redirect to='/signup' />
+//         auth.signOut()
+//     }
 
-const HeaderStyled = styled.div`
-    width:100%;
-    height:70px;
+//     return (
+//         <HeaderStyled>
+//             <ContainerStyled className='container'>
+//                 <FontAwesomeIcon id='bars' size='2x' icon={ faBars } />
+//                 <div className="show-login-frame">
+//                     <img src={ dogeIcon } />
+//                     <p>{currentUser ? currentUser.uid : null}</p>
+//                     { currentUser ? <button onClick={ handleLogout }>Logout</button> : null}
+//                 </div>
+//             </ContainerStyled>
+//         </HeaderStyled>
+//     )
+// }
 
-    .container {
-        #bars {
-            color:#fff;
-        }
+// const HeaderStyled = styled.div`
+//     width:100%;
+//     height:70px;
 
-        .show-login-frame {
-            display:flex;
-            height:100%;
-            justify-content:center;
-            align-items:center;
+//     .container {
+//         #bars {
+//             color:#fff;
+//         }
 
-            img {
-                border-radius:100%;
-                height:75%;
-            }
+//         .show-login-frame {
+//             display:flex;
+//             height:100%;
+//             justify-content:center;
+//             align-items:center;
 
-            p {
-                color:#fff;
-                padding-left:10px;
-            }
-        }
-    }
-`
+//             img {
+//                 border-radius:100%;
+//                 height:75%;
+//             }
 
-export default Header
+//             p {
+//                 color:#fff;
+//                 padding-left:10px;
+//             }
+//         }
+//     }
+// `
+
+// export default Header

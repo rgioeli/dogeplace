@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 import dogeIcon from '../../Images/doge-icon.png'
 import { ContainerStyled } from '../../CSS/GlobalStyled'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 import { useState } from 'react'
 import { auth, createUser } from '../../Firebase/firebase_util'
 
-const SignUp = (user) => {
+const SignUp = () => {
+
+    const history = useHistory()
 
     const [signUpObj, setSignUpObj] = useState({
         email: '',
@@ -25,6 +27,7 @@ const SignUp = (user) => {
     }
 
     const handleSubmit = (e) => {
+
         e.preventDefault()
 
         const test = async () => {
@@ -46,6 +49,8 @@ const SignUp = (user) => {
                 password: '',
                 vpassword: ''
             })
+
+            history.push('/timeline')
         }
 
         test();
